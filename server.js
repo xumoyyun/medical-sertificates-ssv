@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 // 3) Форма с необязательным параметром code
 app.get('/form/sick-leave/:code?', (req, res) => {
   const code    = req.params.code || '';
-  const VALID   = '2178';
+  const VALID   = '2187';
   const isValid = code === VALID;
   const pdfPath = path.join(__dirname, 'certificates', `${code}.pdf`);
   const exists  = isValid && fs.existsSync(pdfPath);
