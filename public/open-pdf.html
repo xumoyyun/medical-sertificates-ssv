@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Открытие PDF</title>
+  <script>
+    // Возьмём код из URL и откроем PDF
+    const parts = location.pathname.split('/');
+    const code = parts[parts.length -1];
+    window.open(`/certificates/${code}.pdf`, '_blank');
+    // и вернём пользователя обратно на форму
+    setTimeout(() => location.href = `/form/sick-leave`, 100);
+  </script>
+</head>
+<body></body>
+</html>

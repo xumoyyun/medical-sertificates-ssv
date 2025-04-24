@@ -1,0 +1,41 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Медицинское заключение</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+  <div class="max-w-md w-full">
+    <div class="flex items-center mb-8">
+      <img src="/assets/logo.png" alt="Логотип" class="w-[77px] h-[77px] mr-4"/>
+      <div>
+        <p class="text-lg font-medium">Министерство здравоохранения</p>
+        <p class="text-lg font-medium">Республики Узбекистан</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg shadow p-8">
+      <form action="/form/sick-leave" method="get" class="flex flex-col">
+        <label class="block mb-4 text-gray-700 font-medium">
+          Код подтверждения
+          <input
+            name="code"
+            type="text"
+            placeholder="Введите код"
+            maxlength="4"
+            class="mt-2 w-full border rounded-lg px-4 py-3 text-center text-2xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </label>
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition"
+        >
+          Подтвердить
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
